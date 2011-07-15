@@ -17,7 +17,7 @@ task :play do
       "--log_stderr",
       "--verbose",
       "--map_file ../maps/symmetric_maps/symmetric_10.map",
-      '"ruby ../MyBot.rb"',   
+      '"clj ../MyBot.clj CLASSPATH=$CLASSPATH:.."',
       '"python ../sample_bots/GreedyBot.py"',
       '"python ../sample_bots/GreedyBot.py"',
       '"python ../sample_bots/LeftyBot.py"'
