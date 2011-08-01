@@ -1,9 +1,3 @@
-ENEMIES = [
-  "python sample_bots/GreedyBot.py",
-  "python sample_bots/HoldBot.py",
-  "python sample_bots/RandomBot.py"
-]
-
 task :play do
   turns = ENV["TURNS"] || "1000"
 
@@ -24,4 +18,19 @@ task :play do
     ]
     sh command.join(' ')
   end
+end
+
+task :zip do
+  sh "rm mybot.zip"
+  sh "zip mybot.zip *.clj"
+end
+
+task :spec do
+  classpath = [
+   '/usr/local/Library/Formula/clojure-contrib.rb',
+   '/usr/local/Cellar/clojure/1.2.1/clojure.jar',
+   'lib/speclj-1.4.0-standalone.jar',
+   '.'
+  ]
+  sh "java -cp #{classpath.join(':')} speclj.main"
 end

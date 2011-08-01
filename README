@@ -1,8 +1,13 @@
-This is a bit more full featured starter pack for the Google AI challenge. To run your bot, use 'rake play'
+# pitlugabot
 
+FIXME: write description
 
-You will need:
+## Usage
 
-* ruby
-* rake
-* python (2.7.1)
+FIXME: write
+
+## License
+
+Copyright (C) 2011 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
